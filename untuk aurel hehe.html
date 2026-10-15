@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>for aurel</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff1f3;--card:#fffafb;--ink:#4a2c35;--soft:#a86a7a;--accent:#e58a9f;--shadow:rgba(180,90,110,.18);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a1a20;--card:#38232b;--ink:#f6dfe5;--soft:#d79aab;--accent:#f0a0b4;--shadow:rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--bg:#2a1a20;--card:#38232b;--ink:#f6dfe5;--soft:#d79aab;--accent:#f0a0b4;--shadow:rgba(0,0,0,.4)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Lora',Georgia,serif;line-height:1.85;min-height:100vh}
+.cover{min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;padding:24px}
+.cover.hide{display:none}
+.env{font-size:84px;cursor:pointer;animation:float 2.4s ease-in-out infinite;background:none;border:0}
+.hint{font-family:'Caveat',cursive,sans-serif;font-size:28px;color:var(--soft)}
+@keyframes float{50%{transform:translateY(-10px)}}
+.letter{display:none;max-width:620px;margin:0 auto;padding:24px 18px 64px}
+.letter.show{display:block}
+.paper{background:var(--card);border-radius:18px;padding:34px 26px;box-shadow:0 10px 36px var(--shadow)}
+h1{font-family:'Caveat',cursive,sans-serif;font-weight:500;font-size:42px;margin:0 0 18px;color:var(--accent)}
+p{margin:0 0 20px;opacity:0;transform:translateY(10px);animation:in .8s forwards}
+@keyframes in{to{opacity:1;transform:none}}
+.sign{font-family:inherit;font-size:16px;color:var(--soft);margin-top:28px;text-align:right}
+.music{display:block;text-align:center;margin:0 auto;padding:13px 22px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-family:sans-serif;font-size:15px;width:max-content;max-width:100%}
+.note{text-align:center;font-size:13px;color:var(--soft);margin:10px 0 22px;font-family:sans-serif}
+</style>
+</head>
+<body>
+<section class="cover" id="cover">
+  <button class="env" id="open" aria-label="Open letter">💌</button>
+  <div class="hint">a little something for you, aurel…</div>
+</section>
+<main class="letter" id="letter">
+  <a class="music" href="https://music.youtube.com/watch?v=CIRSQrkhehM&si=54l30Jbr3i8DGZUG" target="_blank" rel="noopener">🎵 play our song</a>
+  <div class="note">tap to play, then come back to read ✨</div>
+  <div class="paper">
+    <h1>hiii, aurell!</h1>
+    <p>i don’t really know where to start, but i guess i just want you to know how much you mean to me.</p>
+    <p>thank you for the birthday gift, aurel. i know i haven’t even unboxed it yet, but please know that the thought of you preparing something for me already means so much. it’s not just about the gift itself, but the fact that you thought of me, took the time to do something for me, and made me feel special in your own little way (it's not even LITTLE).</p>
+    <p>sometimes, i wish i could find the right words to tell you how much i love you. because honestly, saying “i love you” never really feels enough to explain everything i feel for you (i swear).</p>
+    <p>i love the little things about you. the way you make ordinary days feel a little more special, the way you cross my mind even when i’m busy doing absolutely nothing, and the way a simple thing from you can make me smile for no particular reason.</p>
+    <p>and if there’s one thing i hope you never forget, it’s that you are loved. so deeply, so genuinely, and in ways that i probably still haven’t figured out how to put into words.</p>
+    <p>i hope you know that you don’t have to do anything extraordinary to make me love you. i love you in the little moments, in the ordinary days, and even on the days when neither of us knows exactly what to say. i love you simply because you’re you.</p>
+    <p>i’m sorry if sometimes my way of expressing my feelings comes out a little silly or if i end up being a little too clingy HAHAHAHA. sometimes, i just miss you, or want a little reassurance from you, and i don’t always know how to say it properly.</p>
+    <p>thank you for being part of my days, my thoughts, and so many little things that make me happy. thank you for the gift, for the thought behind it, and for being someone i get to love.</p>
+    <p>i hope i get to make you feel as loved as you make me feel, even in my own imperfect ways.</p>
+    <p>i love you, aurel. i love you lots, and i think a part of me will keep finding new reasons to love you, even in the most ordinary things.</p>
+    <div class="sign">written by alrantisa</div>
+  </div>
+</main>
+<script>
+document.getElementById('open').addEventListener('click',function(){
+  document.getElementById('cover').classList.add('hide');
+  document.getElementById('letter').classList.add('show');
+  document.querySelectorAll('.paper p').forEach(function(p,i){p.style.animationDelay=(i*0.5)+'s'});
+  window.scrollTo(0,0);
+});
+</script>
+</body>
+</html>
